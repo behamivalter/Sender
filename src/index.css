@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* Custom premium scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.15);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(15, 23, 42, 0.25);
+}
+
+/* Glow effects and fine custom details */
+.bg-gradient-mesh {
+  background-color: #f8fafc;
+  background-image: radial-gradient(at 0% 0%, rgba(243, 244, 246, 0.5) 0, transparent 50%),
+                    radial-gradient(at 50% 0%, rgba(219, 234, 254, 0.4) 0, transparent 50%),
+                    radial-gradient(at 100% 0%, rgba(238, 242, 255, 0.4) 0, transparent 50%);
+}
