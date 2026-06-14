@@ -77,7 +77,7 @@ app.post("/api/check-smtp", async (req, res) => {
         user: username,
         pass: password
       },
-      connectionTimeout: 5000, // 5 seconds constraint
+      connectionTimeout: 20000, // 20 seconds constraint to prevent premature timeouts on cloud hosting
       tls: {
         rejectUnauthorized: false
       }
@@ -140,6 +140,7 @@ app.post("/api/campaign/send-email", async (req, res) => {
         user: smtpConfig.username,
         pass: smtpConfig.password
       },
+      connectionTimeout: 20000, // 20 seconds configuration
       tls: {
         rejectUnauthorized: false
       }
